@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 //This object will be written to memory only once.
 const object = {
@@ -5,7 +6,7 @@ const object = {
     lastName: 'Betancur'
 };
 
-const App = () => {
+const FirstApp = ({title, bestNumber = 123, noParentProp}) => {
     //Put your data, objects or methods here if depends on component state/operations.
     //This functions will be written to memory after each re render.
     const printHelloWorld = () => 'Hello world!';
@@ -14,9 +15,21 @@ const App = () => {
         <>
             <h1>{`${object.name} ${object.lastName}`}</h1>
             <h2>{printHelloWorld()}</h2>
-            <p>Description</p>
+            <p>{title + noParentProp}</p>
+            <h3>{bestNumber / 10}</h3>
         </>
     )
 }
 
-export default App;
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    bestNumber: PropTypes.number.isRequired,
+}
+
+FirstApp.defaultProps = {
+    title: 'No hay titulo',
+    bestNumber: 321,
+    noParentProp: ' - Not from parent'
+}
+
+export default FirstApp;
