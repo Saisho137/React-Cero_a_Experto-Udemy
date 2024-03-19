@@ -1,15 +1,32 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const CounterApp = ({value}) => {
-    const handleClick = (event) => {
-        console.log(event)
-    }
+const CounterApp = ({ value }) => {
+    const [counter, setCounter] = useState(value);
+
+    const handleSumClick = () => {
+        //console.log(event)
+        setCounter(counter + 1);
+    };
+
+    const handleSubstractClick = () => {
+        //console.log(event)
+        setCounter(counter - 1);
+    };
+
+    const handleResetClick = () => {
+        //console.log(event)
+        setCounter(value);
+    };
 
     return (
         <>
             <h1>CounterApp</h1>
-            <h2> { value } </h2>
-            <button onClick={ handleClick }> +1 </button>
+            <h2> {counter} </h2>
+
+            <button onClick={handleSumClick}> +1 </button>
+            <button onClick={handleSubstractClick}> -1 </button>
+            <button onClick={handleResetClick}> Reset </button>
         </>
     )
 }
