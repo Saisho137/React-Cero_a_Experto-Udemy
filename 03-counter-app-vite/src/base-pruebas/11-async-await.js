@@ -1,7 +1,4 @@
-// const getImagenPromesa = () => new Promise( resolve => resolve('https://ajskdhaskjdhajs.com') )
-// getImagenPromesa().then( console.log );
-
-const getImagen = async () => {
+export const getImagen = async () => {
     try {
         const apiKey = 'C1khQe3Z7R1W2lfTO9myKeuShdqFYSGC';
         const resp = await fetch(`http://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
@@ -13,8 +10,6 @@ const getImagen = async () => {
         img.src = url;
         document.body.append(img);
     } catch (error) {
-        console.error(error)
+        return('No se encontro la imagen.');
     }
 }
-
-getImagen();
