@@ -1,4 +1,4 @@
-import { getHeroeById } from "./08-import-export";
+import { getHeroeById } from "../08-import-export/08-import-export";
 
 export const getHeroeByIdAsync = (id) => {
     return new Promise((resolve, reject) => {
