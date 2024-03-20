@@ -25,8 +25,8 @@ const CounterApp = ({ value }) => {
             <h2> {counter} </h2>
 
             <button onClick={handleSumClick}> +1 </button>
-            <button onClick={handleSubstractClick}> -1 </button>
             <button onClick={handleResetClick}> Reset </button>
+            <button onClick={handleSubstractClick}> -1 </button>
         </>
     )
 }
