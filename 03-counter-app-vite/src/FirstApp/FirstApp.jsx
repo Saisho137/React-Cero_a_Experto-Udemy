@@ -13,9 +13,9 @@ const FirstApp = ({title, bestNumber = 123, noParentProp}) => {
 
     return (
         <>
-            <h1>{`${object.name} ${object.lastName}`}</h1>
+            <h1>{title}</h1>
             <h2>{printHelloWorld()}</h2>
-            <p>{title + noParentProp}</p>
+            <p>{`${object.name} ${object.lastName}` + noParentProp}</p>
             <h3>{bestNumber / 10}</h3>
         </>
     )
