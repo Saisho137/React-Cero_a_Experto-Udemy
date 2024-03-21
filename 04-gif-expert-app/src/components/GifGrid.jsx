@@ -8,6 +8,7 @@ const GifGrid = ({ category }) => {
 
     return (
         <>
+            {isLoading && <h1>Cargando...</h1>}
             <h3>{category}</h3>
             <div className="card-grid">
                 {images.map(image => (
