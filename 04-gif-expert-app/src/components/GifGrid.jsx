@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { getGifs } from "../helpers/getGifs"
 import GitItem from "./GitItem";
 import useFetchGifs from "../hooks/useFetchGifs";
 
@@ -19,4 +17,4 @@ const GifGrid = ({ category }) => {
     )
 }
 
-export default GifGrid
+export default GifGrid;

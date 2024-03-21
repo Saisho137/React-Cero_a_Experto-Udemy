@@ -1,4 +1,4 @@
-const GitItem = ({ title, url }) => {
+const GifItem = ({ title, url }) => {
     return (
         <div className="card">
             <img src={url} alt={title} />
@@ -7,4 +7,4 @@ const GitItem = ({ title, url }) => {
     )
 }
 
-export default GitItem
+export default GifItem;
