@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const AddCategory = ({ setCategories }) => {
+const AddCategory = ({ onNewCategory }) => {
     const [inputValue, setInputValue] = useState('One Punch');
 
     const onInputChange = ({ target }) => {
@@ -10,7 +10,9 @@ const AddCategory = ({ setCategories }) => {
     const onSubmit = (event) => {
         event.preventDefault(); //Evita que el formulario recargue la página.
         if (inputValue.trim().length <= 1) return;
-        setCategories((pastCategories) => [...pastCategories, inputValue]); //Usar el callback para traer el state actual.
+
+        /* setCategories((pastCategories) => [...pastCategories, inputValue]); */ //Usar el callback para traer el state actual.
+        onNewCategory(inputValue.trim())
         setInputValue('');
     };
 
