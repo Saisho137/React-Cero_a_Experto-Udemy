@@ -10,6 +10,7 @@ const useFetch = (url) => {
 
     useEffect(() => {
         getFetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [url]);
 
     const setLoadingState = () => {
